@@ -28,7 +28,7 @@ const getWordsInfo = async (word) => {
   <p><strong>Antonyms: </strong></p>
   `;
   if (data[0].meanings[0].definitions[0].antonyms.length === 0) {
-    resultDiv += `<span>Not Found</span>`;
+    resultDiv.innerHTML += `<span>Not Found</span>`;
   } else {
     for (
       let i = 0;
@@ -38,4 +38,5 @@ const getWordsInfo = async (word) => {
       resultDiv.innerHTML += `<li>${data[0].meanings[0].definitions[0].antonyms[i]}</li>`;
     }
   }
+  resultDiv.innerHTML += `<a href = ${data[0].sourceUrls} target = "_blank">Read More</a>`
 };
