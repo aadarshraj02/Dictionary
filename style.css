@@ -20,7 +20,7 @@ header h1 {
   font-size: 36px;
 }
 main {
-  min-height: 80vh;
+  min-height: 74.7vh;
   padding: 20px;
   width: 800px;
   margin: 0 auto;
@@ -46,4 +46,10 @@ button {
   color: #fff;
   margin-left: 10px;
   cursor: pointer;
+}
+footer {
+  background-color: #042a2b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
