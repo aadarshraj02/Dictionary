@@ -6,6 +6,7 @@ const input = document.querySelector("input");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   getWordsInfo(input.value);
+  resultDiv.classList.remove("hide");
 });
 
 const getWordsInfo = async (word) => {
