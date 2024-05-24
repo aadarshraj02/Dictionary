@@ -27,8 +27,15 @@ const getWordsInfo = async (word) => {
   }</p>
   <p><strong>Antonyms: </strong></p>
   `;
-
-  for (let i = 0; i < data[0].meanings[0].definitions[0].antonyms.length; i++) {
-    resultDiv.innerHTML += `<li>${data[0].meanings[0].definitions[0].antonyms[i]}</li>`;
+  if (data[0].meanings[0].definitions[0].antonyms.length === 0) {
+    resultDiv += `<span>Not Found</span>`;
+  } else {
+    for (
+      let i = 0;
+      i < data[0].meanings[0].definitions[0].antonyms.length;
+      i++
+    ) {
+      resultDiv.innerHTML += `<li>${data[0].meanings[0].definitions[0].antonyms[i]}</li>`;
+    }
   }
 };
