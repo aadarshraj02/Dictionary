@@ -22,8 +22,13 @@ header h1 {
 main {
   min-height: 80vh;
   padding: 20px;
+  width: 800px;
+  margin: 0 auto;
 }
 main form {
   display: flex;
   justify-content: center;
+}
+form input {
+  flex-grow: 1;
 }
