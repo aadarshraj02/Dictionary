@@ -39,7 +39,7 @@ const getWordsInfo = async (word) => {
         resultDiv.innerHTML += `<li>${data[0].meanings[0].definitions[0].antonyms[i]}</li>`;
       }
     }
-    resultDiv.innerHTML += `<a href = ${data[0].sourceUrls} target = "_blank">Read More</a>`;
+    resultDiv.innerHTML += `<div><a href = ${data[0].sourceUrls} target = "_blank">Read More</a></div>`;
   } catch (error) {
     resultDiv.innerHTML = `<p>Word Not Found!</p>`;
   }
