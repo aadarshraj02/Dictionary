@@ -15,7 +15,7 @@ const getWordsInfo = async (word) => {
     const data = await response.json();
     resultDiv.innerHTML = `
   <h2><strong>WORD: </strong>${data[0].word}</h2>
-  <p>${data[0].meanings[0].partOfSpeech}</p>
+  <p class = "partOfSpeech">${data[0].meanings[0].partOfSpeech}</p>
   <strong>Meaning: </strong> <p>${
     data[0].meanings[0].definitions[0].definition === undefined
       ? "Not Found"

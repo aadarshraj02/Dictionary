@@ -67,3 +67,7 @@ footer {
 .result p {
   margin-top: 10px;
 }
+.partOfSpeech {
+  font-style: italic;
+  margin: 2px;
+}
