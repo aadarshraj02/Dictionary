@@ -25,5 +25,10 @@ const getWordsInfo = async (word) => {
       ? "Not Found"
       : data[0].meanings[0].definitions[0].example
   }</p>
+  <p><strong>Antonyms: </strong></p>
   `;
+
+  for (let i = 0; i < data[0].meanings[0].definitions[0].antonyms.length; i++) {
+    resultDiv.innerHTML += `<li>${data[0].meanings[0].definitions[0].antonyms[i]}</li>`;
+  }
 };
