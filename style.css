@@ -81,7 +81,10 @@ footer {
 .result div {
   margin-top: 10px;
 }
-.result li{
+.result li {
   padding: 4px;
   margin-left: 20px;
+}
+.hide {
+  display: none;
 }
