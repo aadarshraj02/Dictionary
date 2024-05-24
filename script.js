@@ -12,5 +12,18 @@ const getWordsInfo = async (word) => {
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+  resultDiv.innerHTML = `
+  <h2><strong>WORD: </strong>${data[0].word}</h2>
+  <p>${data[0].meanings[0].partOfSpeech}</p>
+  <strong>Meaning: </strong> <p>${
+    data[0].meanings[0].definitions[0].definition === undefined
+      ? "Not Found"
+      : data[0].meanings[0].definitions[0].definition
+  }</p>
+  <strong>Example: </strong> <p>${
+    data[0].meanings[0].definitions[0].example === undefined
+      ? "Not Found"
+      : data[0].meanings[0].definitions[0].example
+  }</p>
+  `;
 };
