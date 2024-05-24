@@ -41,3 +41,9 @@ button {
   border-radius: 5px;
   padding: 10px;
 }
+button {
+  background-color: #042a2b;
+  color: #fff;
+  margin-left: 10px;
+  cursor: pointer;
+}
